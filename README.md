@@ -1,21 +1,21 @@
-# Tech Company Layoffs: Data Cleaning & Exploratory Data Analysis (EDA)
+# Tech Company Layoffs: SQL Data Cleaning & EDA
 
-## 📌 Project Overview
-This project focuses on cleaning and analyzing a dataset of global tech company layoffs using **MySQL**. The goal of this project is to transform raw, messy data into a structured format and perform exploratory data analysis to uncover trends in company layoffs, affected industries, and funding stages.
+Hi! This is a personal project I worked on to practice my SQL skills on a messy, real-world dataset. The focus here is on data preparation (cleaning) and basic exploratory data analysis (EDA) using MySQL.
 
-## 🛠️ Skills & Techniques Applied
-- **Data Cleaning & Wrangling:** Handled missing values, standardized formats (strings and dates), and removed duplicates.
-- **Advanced SQL Functions:** Utilized Common Table Expressions (CTEs), Subqueries, and Window Functions (`ROW_NUMBER()`, `DENSE_RANK()`, `OVER()`).
-- **Data Aggregation:** Grouped and filtered data to extract actionable business insights.
+### What's this project about?
+I took a raw dataset of global tech company layoffs and went through the process of cleaning it up so it's actually usable for analysis. After standardizing the data, I wrote a few queries to see the trends—like which industries were hit the hardest and how the layoffs added up month by month.
 
-## 📂 Repository Files
-1. **`Cleaning Task.sql`**: The SQL script containing the step-by-step data cleaning process.
-2. **`Exploring Data.sql`**: The SQL script containing the EDA queries, including time-series trends and rolling totals.
+### The Process
+I split the work into two main parts:
 
-## 📊 Key Business Questions Answered
-- Which companies and industries were impacted the most by layoffs?
-- What is the rolling total of layoffs month by month?
-- Who are the top 3 companies with the highest number of layoffs per year?
+1. **Data Cleaning (`Data Cleaning.sql`):** 
+This is where the heavy lifting happened. The raw data had duplicates, weird date formats, and missing values. I used Window Functions (`ROW_NUMBER`) to safely find and remove duplicates, standardized the text and date columns, and filled in blank industry fields based on existing company data.
 
----
-*Created by Raghad - Data Science Undergraduate*
+2. **Data Exploration (`EDA.sql`):** 
+Once the data was clean, I wanted to ask it a few questions. Aside from basic `GROUP BY` aggregations, I used CTEs and `DENSE_RANK()` to find the rolling total of layoffs per month and pinpoint the top 3 companies with the most layoffs each year.
+
+### Files in this repo
+- `Data Cleaning.sql`: The script where I cleaned and prepped the data.
+- `EDA.sql`: The script for querying and analyzing the clean dataset.
+
+Feel free to check out the SQL files to see the code!
